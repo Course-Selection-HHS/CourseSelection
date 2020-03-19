@@ -33,5 +33,6 @@ public class Survey {
     computer = scan.nextInt();
     scan.nextLine();
     System.out.println("");
+    scan.close();
   }
 }
