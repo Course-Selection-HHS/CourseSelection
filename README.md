@@ -1,4 +1,4 @@
 # CourseSelection
 
 Course Selection, absolutely magnificent. Pinnacle of awesomeness.
-All hail king hamza.
+All hail the raven hegemon.
