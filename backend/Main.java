@@ -1,4 +1,5 @@
 import java.util.*;
+
 class Main {
   public static Survey sur = new Survey();
 
