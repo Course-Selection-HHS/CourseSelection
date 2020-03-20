@@ -5,6 +5,8 @@ public class Survey {
   public int ap;
   public int blended;
   public int create;
+  public boolean test; // this doesnt do anyhting
+
 
   public Survey() {
     computer = 5;
