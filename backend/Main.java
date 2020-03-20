@@ -30,5 +30,6 @@ class Main {
         System.out.println("\nSorry that was not an option\n");
       }
     }
+    scan.close();
   }
 }
