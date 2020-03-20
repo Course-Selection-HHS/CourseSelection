@@ -40,7 +40,6 @@ public class Courses {
     return str;
   }
   
-
   public String getName() {
     return name;
   }
@@ -72,5 +71,4 @@ public class Courses {
   public int getSub2Credits() {
     return sub2Credits;
   }
-
 }
