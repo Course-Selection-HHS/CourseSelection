@@ -3,7 +3,11 @@ public class Recommend {
   private int[] value;
 
   public Recommend() {
-    Courses[] all = {new Courses("1111", "Concert Band", false, true, 1.0, "music", "create", 7, 3), new Courses("0011", "AP Music History", false, true, 1.0, "music", "ap", 6, 4), new Courses("1111", "Computer Programming", true, true, .5, "computer", "blended", 5, 5), new Courses("1111", "AP Computer Science Principals", false, true, 1.0, "computer", "ap", 6, 4), new Courses("0011", "Advanced Computer Science Principals", false, true, 1.0, "computer", "create", 6, 4)};
+    Courses[] all = {new Courses("1111", "Concert Band", false, true, 1.0, "music", "create", 7, 3),
+    new Courses("0011", "AP Music History", false, true, 1.0, "music", "ap", 6, 4),
+    new Courses("1111", "Computer Programming", true, true, .5, "computer", "blended", 5, 5),
+    new Courses("1111", "AP Computer Science Principals", false, true, 1.0, "computer", "ap", 6, 4),
+    new Courses("0011", "Advanced Computer Science Principals", false, true, 1.0, "computer", "create", 6, 4)};
     allCourses = all;
     value = new int[all.length];
     sort();
