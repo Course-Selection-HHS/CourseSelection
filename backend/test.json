@@ -1,0 +1,30 @@
+{
+    "courseList": [
+        {
+            "name": "Computer Science A",
+            "room": "W204",
+            "tags": {
+                "level1": ["Math", "Science"],
+                "level2": ["Computer Science", "Logic", "Computers"]
+            },
+            "difficulty": {
+                "teacher": 5.3,
+                "students": 10
+            },
+            "isAp": true
+        },
+        {
+            "name": "AP Psychology",
+            "room": "W264",
+            "tags": {
+                "level1": ["Social Studies", "Science"],
+                "level2": ["Psychology", "Logic", "People"]
+            },
+            "difficulty": {
+                "teacher": 5.3,
+                "students": 10
+            },
+            "isAP": true
+        }
+    ]
+}
