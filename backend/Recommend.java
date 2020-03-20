@@ -1,5 +1,4 @@
 public class Recommend {
-
   private Courses[] allCourses;
   private int[] value;
 
