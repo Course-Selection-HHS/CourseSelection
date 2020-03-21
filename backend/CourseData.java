@@ -13,7 +13,7 @@ public class CourseData {
     //Subjects Avalible
     public static final String MATH = "MATH";
     public static final String ENGLISH = "ENGLISH";
-    public static final String SCIENCE = "MATH";
+    public static final String SCIENCE = "SCIENCE";
     public static final String SOCIAL_STUDIES = "SS";
     public static final String COMPUTER_SCIENCE = "CS";
     public static final String APPLIED_TECHNOLOGY = "AT";
