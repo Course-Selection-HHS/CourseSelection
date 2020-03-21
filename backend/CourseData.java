@@ -48,7 +48,9 @@ public class CourseData {
             e.printStackTrace();
         }
     }
-
+    public CourseData(CourseProfile[] profiles){
+        this.profiles = profiles;
+    }
     private CourseProfile readCourse(String folder, String filename) throws FileNotFoundException {
         //Holds profile obj
         CourseProfile profile;
