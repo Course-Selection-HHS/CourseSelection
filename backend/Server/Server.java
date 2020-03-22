@@ -53,7 +53,7 @@ public class Server{
                     sb.append((char) i);
                 }
                 post.setResponce(sb.toString());
-                post.doAction();
+                post.doAction(this);
                 byte[] response = post.getResponce();
                 httpExchange.sendResponseHeaders(200, response.length);
                 OutputStream os = httpExchange.getResponseBody();
@@ -89,7 +89,7 @@ public class Server{
                 sb.append((char) i);
             }
             post.setResponce(sb.toString());
-            post.doAction();
+            post.doAction(this);
             byte[] response = post.getResponce();
             httpExchange.sendResponseHeaders(200, response.length);
             OutputStream os = httpExchange.getResponseBody();

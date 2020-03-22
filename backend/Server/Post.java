@@ -15,8 +15,8 @@ public class Post extends Path{
         this.responce = responce;
     }
     //Calls the PostAction action method
-    public void doAction(){
-        this.action.action(this.responce);
+    public void doAction(Server server){
+        this.action.action(this.responce, server);
     }
     //returns the Post response to the request 
     public byte[] getResponce(){
