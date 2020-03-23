@@ -2,7 +2,8 @@
     "questions":[
         {
             "type":"rate",
-            "text":"How much do you like computers"
+            "text":"How much do you like computers",
+            "id": 1
         }
     ]
 
