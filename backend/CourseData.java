@@ -30,8 +30,7 @@ public class CourseData {
     public static final String MEDICAL_ACADEMY = "MED";
     public static final String PHYSICAL_EDUCATION = "PE";
 
-    //For No prerequisites
-    public static final String NONE = "NONE";
+    
 
     public static final int FRESHMAN = 9;
     public static final int SOPHOMORE = 10;
@@ -101,7 +100,7 @@ public class CourseData {
     /**
      * @return the courses that are in the given subject
      */
-    public CourseProfile[] getCoursesBySubject(String subject){
+    public CourseData getCoursesBySubject(String subject){
         //Gets all courses that comply with subject in arraylist
         ArrayList<CourseProfile> courses = new ArrayList<CourseProfile>();
         for(CourseProfile profile: profiles){
@@ -115,12 +114,12 @@ public class CourseData {
         for(int i = 0; i < courses.size(); i++){
             coursesArr[i] = courses.get(i);
         }
-        return coursesArr;
+        return new CourseData(coursesArr);
     }
     /**
      * @return the courses that match the given credit hours
      */
-    public CourseProfile[] getCoursesByCredit(int creditHours){
+    public CourseData getCoursesByCredit(int creditHours){
         //Gets all courses that have the correct amount of credit hours
         ArrayList<CourseProfile> courses = new ArrayList<CourseProfile>();
         for(CourseProfile profile: profiles){
@@ -134,12 +133,16 @@ public class CourseData {
         for(int i = 0; i < courses.size(); i++){
             coursesArr[i] = courses.get(i);
         }
-        return coursesArr;
+        return new CourseData(coursesArr);
     }
     /**
      * @return the courses that match the prerequisites
      */
-    public CourseProfile[] getCoursesByPrerequisites(String[] prerequisites){
+    public CourseData getCoursesByPrerequisites(String[] prerequisites){
+        //If no prerequisites given run correct method
+        if(prerequisites.length == 0){
+            return getCoursesByPrerequisites();
+        }
         //Gets all the courses that match the prerequisites
         ArrayList<CourseProfile> courses = new ArrayList<CourseProfile>();
         for(CourseProfile profile: profiles){
@@ -159,21 +162,23 @@ public class CourseData {
                 courses.add(profile);
             }
         }
+        //Get all no prerequistites courses
+        CourseProfile[] noPrerequistite = getCoursesByPrerequisites().getAllCourses();
+        for(CourseProfile profile: noPrerequistite){
+            courses.add(profile);
+        }
         //Converts To array
         CourseProfile[] coursesArr = new CourseProfile[courses.size()];
         for(int i = 0; i < courses.size(); i++){
             coursesArr[i] = courses.get(i);
         }
-        return coursesArr;
+        return new CourseData(coursesArr);
     }
         /**
      * @return the courses that need no prerequistites, use const NONE
      */
-    public CourseProfile[] getCoursesByPrerequisites(String prerequisites){
-        if(!prerequisites.equals(NONE)){
-            //If NONE not given
-            return null;
-        }
+    public CourseData getCoursesByPrerequisites(){
+        
         //Gets all the courses that have no prerequistites
         ArrayList<CourseProfile> courses = new ArrayList<CourseProfile>();
         for(CourseProfile profile: profiles){
@@ -186,12 +191,12 @@ public class CourseData {
         for(int i = 0; i < courses.size(); i++){
             coursesArr[i] = courses.get(i);
         }
-        return coursesArr;
+        return new CourseData(coursesArr);
     }
     /**
      * @return the courses that meet the grade requirement
      */
-    public CourseProfile[] getCoursesByGrade(int grade){
+    public CourseData getCoursesByGrade(int grade){
         //Gets all courses that people in the given grade can take
         ArrayList<CourseProfile> courses = new ArrayList<CourseProfile>();
         if(grade == FRESHMAN){
@@ -228,6 +233,6 @@ public class CourseData {
         for(int i = 0; i < courses.size(); i++){
             coursesArr[i] = courses.get(i);
         }
-        return coursesArr;
+        return new CourseData(coursesArr);
     }
 }
