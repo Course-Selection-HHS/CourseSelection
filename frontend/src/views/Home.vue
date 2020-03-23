@@ -2,7 +2,7 @@
   <div class="home">
     <div id="main">
       <h1>Find the right class for you</h1>
-      <router-link to="/potato" id="quiz">Quiz</router-link>
+      <router-link to="/Quiz.vue" id="quiz">Quiz</router-link>
     </div>
   </div>
 </template>
@@ -24,6 +24,8 @@ export default {
   background-color: var(--white);
   width: 99.9vw;
   height: 90vh;
+
+  box-shadow: inset 0px 5px 43px 2px rgba(0,0,0,0.1);
 
   display: grid;
 
