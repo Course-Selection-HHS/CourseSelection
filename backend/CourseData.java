@@ -29,7 +29,6 @@ public class CourseData {
     public static final String GLOBAL_ACADEMY = "GLOBAL";
     public static final String MEDICAL_ACADEMY = "MED";
     public static final String PHYSICAL_EDUCATION = "PE";
-
     
 
     public static final int FRESHMAN = 9;
