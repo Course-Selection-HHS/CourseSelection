@@ -4,7 +4,8 @@
             "type":"rate",
             "text":"How much do you like computers",
             "id": 1
-        }
+        },
+        
     ]
 
 }
