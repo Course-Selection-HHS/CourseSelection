@@ -4,6 +4,52 @@
             "type":"rate",
             "text":"How much do you like computers",
             "id": 1
+        },
+        {
+            "type":"checklist",
+            "text":"Select the subjects you like",
+            "options":[
+                "Math",
+                "English",
+                "Science",
+                "History",
+                "Geography",
+                "Economics/Business",
+                "Arts"
+            ],
+            "id": 2
+        },
+        {
+            "type":"checklist",
+            "text":"Select the topics you like",
+            "options":[
+                "Medical",
+                "Engineering",
+                "Computers",
+                "Theater",
+                "Art",
+                "Marketing"
+            ],
+            "id": 3
+        },
+        {
+            "type":"checklist",
+            "text":"Select all activities that interest you",
+            "options":[
+                "Gardening",
+                "Fitness", 
+                "Taking Pictures", 
+                "Cooking", 
+                "Singing", 
+                "Reading",
+                "Building things",
+                "Solving problems", 
+                "Helping others and your community",
+                "Public Speaking",
+                "Arguing",
+
+            ],
+            "id": 4
         }
     ]
 
