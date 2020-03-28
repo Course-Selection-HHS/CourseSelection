@@ -15,7 +15,7 @@ public class getCourses implements PostAction{
             Question question = new Question(answer.getInt("id"), answer.getString("type"), answer.getString("answer"));
             questions[i] = question;
         }
-        QuestionHandler courses = new QuestionHandler(questions);
+        //QuestionHandler courses = new QuestionHandler(questions);
         
 
         
