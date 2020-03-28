@@ -1,5 +1,8 @@
 # frontend
-
+directions to get site onto your computer:
+in terminal type: 
+  1. npm install
+  2. npm run serve
 ## Project setup
 ```
 npm install
