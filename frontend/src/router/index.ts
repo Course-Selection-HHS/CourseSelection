@@ -10,6 +10,21 @@ const routes = [
     name: 'Home',
     component: Home
   },
+  {
+    path: '/quiz',
+    name: 'Quiz',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Quiz.vue')
+  },
+  {
+    path: '/courses',
+    name: 'Courses',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Courses.vue')
+  },
+  {
+    path: '/potato',
+    name: 'Tags',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Tags.vue')
+  }
   // {
   //   path: '/about',
   //   name: 'About',

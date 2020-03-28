@@ -2,32 +2,56 @@
   <div id="app">
     <div id="nav">
       <span id="name">Course Selection</span>
-      <img id="hhs" src="https://upload.wikimedia.org/wikipedia/en/e/e2/HSInfo1.jpeg" alt="hhs" width="100" hei>
-      <div id="links">
-        <router-link to="/">Home</router-link>
-        <router-link to="/">Courses</router-link> 
-        <router-link to="/">Tags</router-link>
-        <router-link to="/Quiz.vue" id="quiz">Quiz</router-link>
-      </div>
-      <!-- <router-link to="/about">About</router-link> -->
-      <Hamburger/>
+      <img id="hhs" src="https://upload.wikimedia.org/wikipedia/en/e/e2/HSInfo1.jpeg" alt="hhs" height="70">
+      <transition name="sidenav">
+        <div id="links" :class="cName" v-if="(cName == 'mobile') || !changed">
+          <router-link to="/" @click="sidebar"><span @click="sidebaR">Home</span></router-link>
+          <router-link to="/courses" @click="sidebar"><span @click="sidebaR">Courses</span></router-link> 
+          <router-link to="/potato" @click="sidebar"><span @click="sidebaR">Tags</span></router-link>
+          <router-link to="/quiz" id="quiz"><span @click="sidebaR">Quiz</span></router-link>
+        </div>
+      </transition>
+      <div id="hamburger_parent" @click="sidebar"><Hamburger/></div>
     </div>
-    <router-view/>
+    <transition name="fade" mode="out-in">
+      <router-view/>
+    </transition>
+    <transition name="blanket">
+      <!-- <div id="shadow_blanket_parent"> -->
+        <div id="shadow_blanket" v-if="cName == 'mobile'" @click="sidebar"></div>
+      <!-- </div> -->
+    </transition>
   </div>
 </template>
 
 <script lang="ts">
 import Hamburger from "./components/sub/Hamburger.vue"
+import { Component, Vue } from 'vue-property-decorator';
 
-export default {
-  name: 'Home',
+@Component({
+  name: "Home",
   components: {
     Hamburger
+  }
+})
+export default class Home extends Vue {
+  cName = "regular"
+  changed = false
+
+  sidebar(): void {
+    // eslint-disable-next-line
+    this.cName = this.cName == "mobile" ? "regular" : "mobile"
+    this.changed = true
+  }
+
+  sidebaR(): void {
+    this.cName = "regular"
   }
 }
 </script>
 
 <style lang="scss">
+
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap');
 @use './sass/background';
 
@@ -35,36 +59,48 @@ export default {
   :root {
     --red1: #EF233C;
     --red2: #D90429;
-    --white1: #f7f5f5;
-    --white2:#f4eded;
-    --lightgrey1: rgb(174, 141, 141);
-    --lightgrey2: rgb(159, 129, 129);
-    --grey1: #646675;
-    --grey2: #2B2D42;
+    --white1: rgb(247, 245, 245);
+    --white2:rgb(244, 244, 244);
+    --lightgrey1: rgb(174, 174, 174);
+    --lightgrey2: rgb(159, 159, 159);
+    --grey1: rgb(100, 100, 100);
+    --grey2: rgb(43, 43, 43);
+    --grey3: rgb(23, 23, 23);
 
-  --red3: #b30000;
-}
+    --red3: #b30000;
 
-::selection {
-  background-color: var(--red3);
-  color: white;
-}
+    /* 
+    Old colors:
+      --white: #EDF2F4;
+      --lightgrey1: #8D99AE;
+      --lightgrey2: #818C9F;
+      --grey1: #646675;
+      --grey2: rgb(43, 45, 66);
+    */
+  }
 
-::-webkit-scrollbar {
-  width: 5px;
-  background: var(--white);
-}
+  ::selection {
+    background-color: var(--red3);
+    color: white;
+  }
 
-::-webkit-scrollbar-thumb {
-  background: var(--red3); 
-  border-radius: 10px;
-  
-  transition: transform .3s;
-}
+  ::-webkit-scrollbar {
+    width: 5px;
+    background: var(--white1);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--red3); 
+    border-radius: 10px;
+    
+    transition: transform .3s;
+  }
 /*#endregion*/
 * {
   font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: subpixel-antialiased;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 body {
@@ -77,7 +113,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: var(--grey1);
+  color: var(--grey2);
 }
 
 #nav {
@@ -94,37 +130,69 @@ body {
     font-size: 1.3em;
   }
 
-  #links {
+  #links.regular {
     grid-column: 4;
     display: grid;
     grid-auto-flow: column;
     gap: 50px;
+  }
 
-    #quiz {
-      --size: 10px;
+  #links.mobile {
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    width: 50vw;
+    height: 100vh;
+    z-index: 999;
+    background: var(--grey3);
 
-      padding: calc(var(--size) / 2) var(--size);
-      border-radius: 5px;
-      margin-left: calc(-1 * var(--size));
-      border: 1px solid var(--red3);
+    display: grid;
+    // grid-template-rows: ;
+
+    a.router-link-exact-active {
+      color: white;
     }
   }
 
   a {
-    font-weight: 600;
+    font-weight: 400;
     text-decoration: none;
-    color: var(--grey1);
+    color: var(--red2);
 
-    transition: transform .3s;
+    transition: all .3s;
     backface-visibility: hidden;
 
+    &#quiz {
+      --size: 15px;
+      --color: var(--red2);
+
+      padding: calc(var(--size) / 2) var(--size);
+      border-radius: 5px;
+      margin-left: calc(-1 * var(--size));
+      border: 1px solid var(--color);
+      background-color: var(--color);
+      color: var(--white1);
+    }
+
     &.router-link-exact-active {
-      color: var(--red2);
+      color: var(--grey2);
+
+      &#quiz {
+        --color: var(--lightgrey1);
+
+        border-color: var(--color) !important;
+        background-color: var(--color) !important;
+      }
     }
 
     &:hover {
       transform: scale(1.25);
       color: var(--red3);
+
+      &#quiz {
+        border-color: var(--red3) !important;
+        background: var(--red3) !important;
+      }
     }
   }
 
@@ -132,7 +200,7 @@ body {
     place-self: center;
   }
 
-  @media (min-width: 650px) {
+  @media (min-width: 651px) {
     #hamburger {
       display:none;
     }
@@ -154,9 +222,69 @@ body {
       justify-self: center;
     }
 
-    #links {
+    #links.regular {
       display:none;
     }
+
+    #hhs {
+      display: block;
+    }
   }
+
+  @media (max-width: 550px) {
+    #hhs {
+      display: none;
+    }
+  }
+}
+
+#hamburger_parent {
+  display: contents;
+}
+
+#shadow_blanket_parent {
+  display: contents;
+  position: fixed;
+}
+
+#shadow_blanket {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  // opacity: .6;
+  background: #000;
+  z-index: -1;
+}
+
+.sidenav-enter-active, .sidenav-leave-active {
+  // transition: opacity .5s;
+  transition: transform .5s;
+}
+.sidenav-enter, .sidenav-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  // opacity: 0;
+  transform: translate(50vw, 0px);
+}
+
+.blanket-enter-active, .blanket-leave-active {
+  // transition: opacity .3s;
+  transition: transform .5s;
+}
+.blanket-enter, .blanket-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  // opacity: 0;
+  transform: translate(100vw, 0px);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition-duration: 0.3s;
+  transition-property: opacity;
+  transition-timing-function: ease;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0
 }
 </style>

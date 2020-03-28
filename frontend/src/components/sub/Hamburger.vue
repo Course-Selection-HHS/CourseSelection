@@ -24,5 +24,15 @@ export default {
 <style lang="scss" scoped>
     svg {
         fill: var(--red2);
+        transition: all .25s;
+        user-select: none;
+
+        &:hover {
+            transform: scale(1.25);
+            fill: var(--red3);
+        }
+        &:active {
+            transform: scale(.75);
+        }
     }
 </style>

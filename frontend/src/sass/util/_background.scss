@@ -1,0 +1,13 @@
+@mixin backgroundcolor($color, $border, $important: false) {
+    @if($important) {
+        background-color: $color !important;
+        @if($border) {
+            border-color: $color !important;
+        }
+    } @else {
+        background-color: $color;
+        @if($border) {
+            border-color: $color;
+        }
+    }
+}
