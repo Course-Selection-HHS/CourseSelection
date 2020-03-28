@@ -29,15 +29,18 @@ export default {
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap');
-/*#region*/
-:root {
-  --red1: #EF233C;
-  --red2: #D90429;
-  --white: #EDF2F4;
-  --lightgrey1: #8D99AE;
-  --lightgrey2: #818C9F;
-  --grey1: #646675;
-  --grey2: #2B2D42;
+@use './sass/background';
+
+/*#region PsudoElements*/
+  :root {
+    --red1: #EF233C;
+    --red2: #D90429;
+    --white1: #f7f5f5;
+    --white2:#f4eded;
+    --lightgrey1: rgb(174, 141, 141);
+    --lightgrey2: rgb(159, 129, 129);
+    --grey1: #646675;
+    --grey2: #2B2D42;
 
   --red3: #b30000;
 }
