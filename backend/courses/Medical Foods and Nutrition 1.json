@@ -1,0 +1,14 @@
+{
+    "department":"FACS",
+    "name":"Foods and Nutrition 1",
+    "hours": 0.5,
+    "isBlended": false,
+    "freshman": false,
+    "sophomore": false,
+    "junior": true,
+    "senior": true,
+    "prerequisites":[],
+    "tags":["food", "medical"],
+    "description": "This course is designed for students who are interested in the medical field and wish to learn food safety, sanitation and recipe skills that are applicable in a clinical setting. This basic course includes classroom and laboratory experiences needed to develop knowledge and understanding of food. Emphasis is given to nutrition, safety, sanitation, use and care of equipment, following recipes, use of microwave oven, fruits, vegetables, eggs, meat, poultry, dairy, vegetarianism, and fats to in meal planning and nutritional food choices."
+
+}

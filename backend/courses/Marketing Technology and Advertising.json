@@ -1,0 +1,14 @@
+{
+    "department":"BUSINESS",
+    "name":"Marketing Technology and Advertising",
+    "hours": 0.5,
+    "isBlended": false,
+    "freshman": false,
+    "sophomore": true,
+    "junior": true,
+    "senior": true,
+    "prerequisites":[],
+    "tags":["technology", "marketing"],
+    "description": "An introduction to marketing and advertising in the 21st Century. The marketing concept involves putting the customer at the heart of everything, and today’s marketing world is all about creating customer value and building relationships. This course is a foundation in marketing and advertising concepts including: Marketing Mix, branding, advertising strategies, and international marketing. The course is taught through current event examples and stories that show these concepts in action as we study marketing and advertising plans. It is the perfect introductory course for those interested in sports marketing,"
+
+}

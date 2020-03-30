@@ -1,0 +1,14 @@
+{
+    "department":"SS",
+    "name":"AP Economics",
+    "hours": 1,
+    "isBlended": false,
+    "freshman": false,
+    "sophomore": true,
+    "junior": true,
+    "senior": true,
+    "prerequisites":["Algebra II"],
+    "tags":["ap", "government"],
+    "description": "This course parallels the material presented in a year-long college introductory course in macroeconomics and microeconomics. Students begin in the fall semester with basic concepts such as opportunity costs and shifts in supply and demand. The rest of the semester focuses on microeconomics: consumer behavior theory, theory of the firm, factor markets and the role of the government in the private sector. Spring semester focuses on macroeconomics: GDP determination, AD/AS model, fiscal policies, money and banking, monetary policies, controversies in macroeconomic theory, and international trade. Graphic and tabular analyses are used throughout the course."
+
+}

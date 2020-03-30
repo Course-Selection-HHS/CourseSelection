@@ -1,0 +1,14 @@
+{
+    "department":"MUSIC",
+    "name":"Concert Band",
+    "hours": 1,
+    "isBlended": false,
+    "freshman": true,
+    "sophomore": true,
+    "junior": true,
+    "senior": true,
+    "prerequisites":[],
+    "tags":["music"],
+    "description": "This course is the entry level band class is open to students wishing to develop their musicianship on a woodwind or brass instrument. In this course, students will gain knowledge of their twelve major scales, basic rhythm studies, and develop understanding of musical terminology/symbols. In addition, we learn to develop what the ideal band ensemble sound is through various repertoire. Students are required to participate in two concerts per semester along with possible festivals and special rehearsals. Because Concert Band percussion students meet during Concert Percussion, there will be after school rehearsals with the full ensemble. Dates are to be determined."
+
+}

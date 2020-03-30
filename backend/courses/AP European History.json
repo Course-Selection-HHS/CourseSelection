@@ -1,0 +1,14 @@
+{
+    "department":"SS",
+    "name":"AP European History",
+    "hours": 1,
+    "isBlended": true,
+    "freshman": false,
+    "sophomore": true,
+    "junior": true,
+    "senior": true,
+    "prerequisites":[],
+    "tags":["blended", "ap", "global"],
+    "description": "This course develops an understanding of the major themes in modern European history, with an emphasis on analyzing historical evidence and critical literary narratives in order to gain a chronological picture of European history. The critical thinking skills developed throughout the course, combined with the mastery of European history content, will prepare the student for the Advanced Placement Exam. The level of work and critical thinking required within the class will allow students to have a college-level experience at Huntley High School."
+
+}

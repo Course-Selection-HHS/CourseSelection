@@ -1,0 +1,14 @@
+{
+    "department":"VART",
+    "name":"Basic Art 2-D",
+    "hours": 0.5,
+    "isBlended": false,
+    "freshman": true,
+    "sophomore": true,
+    "junior": true,
+    "senior": true,
+    "prerequisites":[],
+    "tags":["art"],
+    "description": "Basic Art 2-D is an introductory course in the art department, which is required for further advancement on the 2-D art track. Students will learn fundamental techniques of drawing, shading, and painting in various media such as graphite, acrylic paint, colored pencil, and ink. Units will focus on the Elements of Line, Value, Shape, and Color and will incorporate known artists whose works exemplify those Elements. It is recommended that students take Basic 2-D and Basic 3-D if they plan to advance through the art department curriculum."
+
+}

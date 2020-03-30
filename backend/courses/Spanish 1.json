@@ -1,0 +1,14 @@
+{
+    "department":"LANG",
+    "name":"Spanish 1",
+    "hours": 1,
+    "isBlended": false,
+    "freshman": true,
+    "sophomore": true,
+    "junior": true,
+    "senior": true,
+    "prerequisites":[],
+    "tags":["2ndLanguage", "spanish"],
+    "description": "Spanish I is an introduction to the Spanish language for nonheritage speakers. Students will learn how to describe themselves, others, and the world around them at a novice level of proficiency. Some of the themes studied include celebrations, family, and hobbies/interests. This course stresses speaking, listening, reading, and writing in Spanish as well as developing a cultural understanding of the Spanish-speaking world."
+
+}

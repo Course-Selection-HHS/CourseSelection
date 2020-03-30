@@ -1,0 +1,14 @@
+{
+    "department":"SS",
+    "name":"Current Issues",
+    "hours": 0.5,
+    "isBlended": true,
+    "freshman": true,
+    "sophomore": true,
+    "junior": true,
+    "senior": true,
+    "prerequisites":[],
+    "tags":["blended", "government", "global"],
+    "description": "Current Issues is a semester course designed to help students understand, interpret, and develop positions on events and issues in today’s world. Using inquiry-based case studies, students will answer compelling questions surrounding the 1st amendment & how it applies to them in school, media literacy & the role that mainstream media has on the current culture of the United States, and the political party system & how it creates & hinders progress in the United States. Students will be expected to research and discuss issues as they evolve and trace the roots of recurring social, political, economic and educational issues. Students will develop and use essential skills including investigative inquiry, interpretation & evaluation of media sources, reflective thinking, thoughtful examination of major political topics, and the ability to articulate and defend core beliefs."
+
+}

@@ -1,0 +1,14 @@
+{
+    "department":"SS",
+    "name":"Criminal Law",
+    "hours": 0.5,
+    "isBlended": false,
+    "freshman": false,
+    "sophomore": true,
+    "junior": true,
+    "senior": true,
+    "prerequisites":[],
+    "tags":["government"],
+    "description": "Interested in television shows like Law and Order, Criminal Minds, and CSI? In this course, students will learn the basics of legal analysis and gain an understanding of the legal terms, concepts, and principles of criminal law. Students will study crimes against the person (such as homicide, kidnapping, and assault/battery), crimes against property (such as larceny, burglary, embezzlement, and extortion), and criminal defenses (such as insanity and self-defense), and the elements necessary to prove them in court. Case studies from today’s headlines will be emphasized, and class discussion and debate will be encouraged."
+
+}

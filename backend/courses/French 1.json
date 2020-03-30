@@ -1,0 +1,14 @@
+{
+    "department":"LANG",
+    "name":"French 1",
+    "hours": 1,
+    "isBlended": false,
+    "freshman": true,
+    "sophomore": true,
+    "junior": true,
+    "senior": true,
+    "prerequisites":[],
+    "tags":["2ndLanguage", "french"],
+    "description": "This is an introductory course to French created for high school students. This course stresses speaking, listening, reading, and writing in the target language as well as developing a cultural understanding of the French-speaking world. Students respond as a class as well as work individually, in pairs, and in small groups. In addition to studying grammar and vocabulary, students will also focus on the French culture through multimedia and activities. Some of the themes studied include self and family, daily activities, and my community."
+
+}

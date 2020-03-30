@@ -1,0 +1,14 @@
+{
+    "department":"FACS",
+    "name":"Foods and Nutrition 1",
+    "hours": 0.5,
+    "isBlended": true,
+    "freshman": true,
+    "sophomore": true,
+    "junior": true,
+    "senior": true,
+    "prerequisites":[],
+    "tags":["blended", "food"],
+    "description": "This is a foundational training course for the everyday cook. This course focuses on safety and sanitation, recipe reading, basic measurements and conversions, equipment classification, basic knife skills. Topics covered include, fruits and vegetables, quick breads, meat and poultry, dairy, vegetarianism, fats and chocolate, basic nutrition, and meal planning."
+
+}

@@ -1,0 +1,14 @@
+{
+    "department":"VART",
+    "name":"Art and Design for Engineers",
+    "hours": 0.5,
+    "isBlended": false,
+    "freshman": true,
+    "sophomore": true,
+    "junior": true,
+    "senior": true,
+    "prerequisites":[],
+    "tags":["engineering", "art"],
+    "description": "Through producing both 2-dimensional and 3-dimensional works of art based on engineering design and principles, students will develop artistic skills that enhance their creative idea development and assist in expressing their engineering ideas visually. Students will be introduced to artists who have produced historically relevant works of art based on the principles of engineering, then apply the engineering design process to the production of decorative and functional art. Students will begin with the foundations of drawing, including perspective drawing. These skills will be applied to the development of a kinetic sculpture as well as a work of functional art based on industrial design principles. Students will also be exposed to the mold-making process and its application to the mass production of products"
+
+}

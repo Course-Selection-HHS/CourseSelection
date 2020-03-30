@@ -1,0 +1,14 @@
+{
+    "department":"CS",
+    "name":"AP Computer Science A",
+    "hours": 1,
+    "isBlended": false,
+    "freshman": false,
+    "sophomore": true,
+    "junior": true,
+    "senior": true,
+    "prerequisites":["Algebra II", "Computer Programming", " AP Computer Science Principles"],
+    "tags":["ap", "coding", "technology"],
+    "description": "This course emphasizes programming methodology with a concentration on problem solving and algorithm development and is meant to be the equivalent of a first semester college level course in computer science. It is highly recommended that the student has passed computer programming. This course is ideal for students planning to go into a technical field related to computers. The programming language Java will be used throughout this course."
+
+}

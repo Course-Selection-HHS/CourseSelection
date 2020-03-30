@@ -1,0 +1,14 @@
+{
+    "department":"BUSINESS",
+    "name":"Sports and Entertainment Marketing",
+    "hours": 0.5,
+    "isBlended": false,
+    "freshman": false,
+    "sophomore": true,
+    "junior": true,
+    "senior": true,
+    "prerequisites":["Marketing Technology and Advertising"],
+    "tags":["sports", "marketing"],
+    "description": "This course introduces students to the exciting and dynamic areas of sports and entertainment marketing, and the many occupations in these fields. One of the largest and fastest growing industries of the 21st century, sports and entertainment marketing provides a unique way to look at the business world. Students will focus on two areas: 1) the marketing of sports and entertainment events, and 2) the marketing of nonsports products and services through these types of events. Using an active and hands-on approach, students will discover why companies pay to be associated with a team or entertainer, how to develop ticket plans to fill arenas, and why target marketing and taking a customer approach leads to success."
+
+}

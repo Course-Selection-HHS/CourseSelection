@@ -1,0 +1,14 @@
+{
+    "department":"VART",
+    "name":"Digital and Graphic Arts 1",
+    "hours": 0.5,
+    "isBlended": false,
+    "freshman": false,
+    "sophomore": true,
+    "junior": true,
+    "senior": true,
+    "prerequisites":["Basic Art 2-D"],
+    "tags":["technology","art"],
+    "description": "This course is intended for students who wish to apply fundamental design using the Principles and Elements of art in visual communications. This class will explore different art occupations (logo design, graphic design, illustration, t-shirt design, typography, computer graphics, and more). This course will include analog art, drawing and painting projects to learn the fundamentals of design and layout, and digital art, utilizing Adobe Illustrator"
+
+}

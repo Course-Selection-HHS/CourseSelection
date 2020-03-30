@@ -1,0 +1,14 @@
+{
+    "department":"ENGLISH",
+    "name":"Television Production",
+    "hours": 1,
+    "isBlended": true,
+    "freshman": true,
+    "sophomore": true,
+    "junior": true,
+    "senior": true,
+    "prerequisites":[],
+    "tags":["blended", "technology", "art"],
+    "description": "Students enrolled in Television Production will produce programs that are broadcast for the entire school. In this course, students will be responsible for researching, writing, shooting, and editing segments for the program which will highlight HHS activities and school-related issues, as well as those occurring in the broader community. The course will stress the development of the following studio and field production skills: project planning, scripting, camera operation, composition, editing, sound recording, lighting, crewing, reporting, anchoring, programming, and production management. Participating students will play a crucial role in promoting positive dialogue and fostering school spirit in a highly visible and exciting course through mass media. Because the class requires numerous professional-level productions to be executed under strict deadlines, hours outside the normal school day will be required."
+
+}

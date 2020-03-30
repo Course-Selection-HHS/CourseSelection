@@ -1,0 +1,14 @@
+{
+    "department":"AT",
+    "name":"Basic Woodworking Technology",
+    "hours": 0.5,
+    "isBlended": false,
+    "freshman": true,
+    "sophomore": true,
+    "junior": true,
+    "senior": true,
+    "prerequisites":[],
+    "tags":["engineering", "art"],
+    "description": "This course is an entry level woodworking and manufacturing course. Students will learn current manufacturing processes that are used within the field. This class takes a hands-on approach to teaching applicable skills and knowledge required in the field of woodworking. Students will learn how to plan, develop, estimate and determine costs as they create goods and products for their personal use. Safety, quality, accuracy, and production are emphasized throughout the course. An additional lab fee will be applied."
+
+}

@@ -1,0 +1,14 @@
+{
+    "department":"PERFORMING",
+    "name":"AP Music Theory",
+    "hours": 0.5,
+    "isBlended": false,
+    "freshman": true,
+    "sophomore": true,
+    "junior": true,
+    "senior": true,
+    "prerequisites":[],
+    "tags":["theatre", "fashion"],
+    "description": "This is a performance based course for students interested in drama. Students will learn techniques for developing a character. Acting scenes and short plays will be performed in class. A field trip will be taken to see a professional theatre production. Additional units of study include Theatre History and play evaluation. Technical aspects of theatre such as costuming and set design will also be explored."
+
+}

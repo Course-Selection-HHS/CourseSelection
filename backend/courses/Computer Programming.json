@@ -1,0 +1,14 @@
+{
+    "department":"CS",
+    "name":"Computer Programming",
+    "hours": 0.5,
+    "isBlended": true,
+    "freshman": true,
+    "sophomore": true,
+    "junior": true,
+    "senior": true,
+    "prerequisites":["Algebra I"],
+    "tags":["blended", "coding", "technology"],
+    "description": "This course is designed for students interested in learning more about how computer programs are written. Students create computer programs that may include games, animation, and programs that connect to other classes. Students will improve their logic and problem solving skills in this introduction to structured programming. This class will prepare students for more complex programming classes or projects."
+
+}

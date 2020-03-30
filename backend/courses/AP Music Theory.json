@@ -1,0 +1,14 @@
+{
+    "department":"MUSIC",
+    "name":"AP Music Theory",
+    "hours": 1,
+    "isBlended": false,
+    "freshman": false,
+    "sophomore": false,
+    "junior": true,
+    "senior": true,
+    "prerequisites":[],
+    "tags":["ap","music"],
+    "description": "The AP Music Theory course will develop a student's ability to recognize, understand, and describe the basic materials and processes of music that are heard or presented in a score. There will be special emphasis on developing sight-singing and aural skills as well as score analysis and composition techniques. This course is suggested for highly motivated students who may be considering music as a college major, and it is designed to replicate the year-long college freshman course. Students must have performing skills in voice or an instrument as demonstrated by participation in a school performing ensemble or by audition with the instructor."
+
+}

@@ -1,0 +1,14 @@
+{
+    "department":"LANG",
+    "name":"Chinese 1",
+    "hours": 1,
+    "isBlended": false,
+    "freshman": true,
+    "sophomore": true,
+    "junior": true,
+    "senior": true,
+    "prerequisites":[],
+    "tags":["2ndLanguage", "chinese"],
+    "description": "This course introduces students to the basic language skills of listening, speaking, reading, and writing, which will include learning vocabulary and the Chinese phonetic alphabet. In the beginning, greater emphasis is placed on listening, comprehension, and speaking using simple dialogues and short readings. Students will study the Chinese language, its culture and history. This course will establish the foundation for further study"
+
+}

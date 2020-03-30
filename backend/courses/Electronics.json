@@ -1,0 +1,14 @@
+{
+    "department":"SCIENCE",
+    "name":"Electronics",
+    "hours": 1,
+    "isBlended": false,
+    "freshman": false,
+    "sophomore": true,
+    "junior": true,
+    "senior": true,
+    "prerequisites":["Algebra I"],
+    "tags":["engineering", "technology"],
+    "description": "This in an introductory course in high school physics that introduces the concepts that control the physical world around as well as applying mathematical models to the situations. Topics included in the course are electricity, waves and sound, forces, light, energy, two dimensional motion, and momentum. This course utilizes many mathematical aspects covered in Algebra I and it is necessary that students enrolled have a mastery in that course. The class is very laboratory based and many group projects and activities will be utilized in instruction."
+
+}

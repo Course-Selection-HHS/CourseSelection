@@ -8,6 +8,7 @@
     "junior": true,
     "senior": true,
     "prerequisites":[],
+    "tags":["engineering", "technology"],
     "description": "Designed for 9th or 10th grade students, the major focus of IED is the design process and its application. Through hands-on projects, students apply engineering standards and document their work. Students use industry standard 3D modeling software to help them design solutions to solve proposed problems, document their work using an engineer’s notebook, and communicate solutions to peers and members of the professional community"
 
 }

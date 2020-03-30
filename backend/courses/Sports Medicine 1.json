@@ -1,0 +1,14 @@
+{
+    "department":"PE",
+    "name":"Sports Medicine 1",
+    "hours": 1,
+    "isBlended": true,
+    "freshman": false,
+    "sophomore": true,
+    "junior": true,
+    "senior": true,
+    "prerequisites":[],
+    "tags":["blended","sports", "medical"],
+    "description": "This course provides students with background information on Sports Medicine and begins to expose students to different athletic injuries. Topics include prevention, recognition, evaluation, assessment, and care of athletic injuries. Students who successfully complete this class will be able to explain how to prevent athletic injuries generically and specifically related to particular injuries or sports. Students will be able to demonstrate the skill of taping as a preventative measure. Students will be able to recognize and evaluate the most common athletic injuries. Students will be able to understand and assist in the immediate and long term care of athletic injuries."
+
+}

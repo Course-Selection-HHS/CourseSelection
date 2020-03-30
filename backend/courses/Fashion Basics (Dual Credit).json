@@ -1,0 +1,14 @@
+{
+    "department":"FACS",
+    "name":"Fashion Basics (Dual Credit)",
+    "hours": 0.5,
+    "isBlended": true,
+    "freshman": true,
+    "sophomore": true,
+    "junior": true,
+    "senior": true,
+    "prerequisites":[],
+    "tags":["blended", "engineering", "fashion"],
+    "description": "This course is a dual credit course with Harper College. Presents fashion merchandise through the evaluation of fashion products. Develops awareness of construction, as well as workmanship and design elements, such as fabric, color, silhouette, and taste. This class will include construction with sewing projects. This course would replace our current World of Fashion 1 course and offer students dual credit. The benefits of this course for students is the understanding that fashion doesn’t stand alone. It is influenced by—and influences—the world around it. An intimate understanding of social, cultural, political, artistic, and economic movements throughout history will help students understand how fashion has evolved and continues to be shaped by the world around it."
+
+}

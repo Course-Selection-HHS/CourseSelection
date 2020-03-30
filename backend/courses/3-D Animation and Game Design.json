@@ -1,0 +1,14 @@
+{
+    "department":"CS",
+    "name":"3-D Animation and Game Design",
+    "hours": 0.5,
+    "isBlended": true,
+    "freshman": true,
+    "sophomore": true,
+    "junior": true,
+    "senior": true,
+    "prerequisites":[],
+    "tags":["coding", "technology", "art"],
+    "description": "3-D Animation and Game Design introduces computer programming in a graphical, user-friendly way. In this class students will learn how to create basic 3D games through the use of the Unreal programming environment. No prior programming experience is necessary to take this introductory class."
+
+}

@@ -1,0 +1,14 @@
+{
+    "department":"PE",
+    "name":"Medical Skills and Services",
+    "hours": 0.5,
+    "isBlended": true,
+    "freshman": true,
+    "sophomore": true,
+    "junior": true,
+    "senior": true,
+    "prerequisites":[],
+    "tags":["blended", "medical"],
+    "description": "This course provides students with background information on health care and begins to expose students to different health care careers. Topics include history and trends of health care, the health care system, careers in health care, ethical and legal responsibilities, medical terminology, basic anatomy and physiology, infection control, and vital signs. Students will perform two hands on practical examinations including Cranial Nerve Testing and Vital Signs Testing in addition to traditional tests. These skills transcend all health care professions."
+
+}
