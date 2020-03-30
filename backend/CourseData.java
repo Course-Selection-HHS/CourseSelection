@@ -66,7 +66,12 @@ public class CourseData {
         for(int i =0; i < JSONprerequisites.length(); i++){
             prerequisites[i] = JSONprerequisites.getString(i);
         }
-        profile = new CourseProfile(obj.getString("department"), obj.getString("name"), obj.getInt("hours"), obj.getBoolean("isBlended"), obj.getBoolean("freshman"), obj.getBoolean("sophomore"), obj.getBoolean("junior"), obj.getBoolean("senior"), prerequisites, obj.getString("description"));
+        JSONArray JSONtags = obj.getJSONArray("tags");
+        String[] tags = new String[JSONtags.length()];
+        for(int i =0; i < JSONtags.length(); i++){
+            tags[i] = JSONtags.getString(i);
+        }
+        profile = new CourseProfile(obj.getString("department"), obj.getString("name"), obj.getInt("hours"), obj.getBoolean("isBlended"), obj.getBoolean("freshman"), obj.getBoolean("sophomore"), obj.getBoolean("junior"), obj.getBoolean("senior"), prerequisites, obj.getString("description"), tags);
         return profile;
     }
     //Gets an array of CourseProfile from a json file containing the paths of every json file for each course
@@ -228,6 +233,25 @@ public class CourseData {
         }
         
         //Converts To array
+        CourseProfile[] coursesArr = new CourseProfile[courses.size()];
+        for(int i = 0; i < courses.size(); i++){
+            coursesArr[i] = courses.get(i);
+        }
+        return new CourseData(coursesArr);
+    }
+    public CourseData getCoursesByTag(String tag){
+        //Gets all courses that fit the given tag
+        ArrayList<CourseProfile> courses = new ArrayList<CourseProfile>();
+        for(CourseProfile profile: this.profiles){
+            String[] profileTag = profile.getTags();
+            for(String pTag: profileTag){
+                if(pTag.equals(tag)){
+                    courses.add(profile);
+                    break;
+                }
+            }
+        }
+        //Converts to array
         CourseProfile[] coursesArr = new CourseProfile[courses.size()];
         for(int i = 0; i < courses.size(); i++){
             coursesArr[i] = courses.get(i);

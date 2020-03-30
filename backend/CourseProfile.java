@@ -9,7 +9,8 @@ public class CourseProfile{
     private boolean senior;
     private String[] prerequisites;
     private String description;
-    public CourseProfile(String department, String name, int hours, boolean blended, boolean freshman, boolean sophomore, boolean junior, boolean senior, String[] prerequisites, String description){
+    private String[] tags;
+    public CourseProfile(String department, String name, int hours, boolean blended, boolean freshman, boolean sophomore, boolean junior, boolean senior, String[] prerequisites, String description, String[] tags){
         //Initilizes every instance var
         this.department = department;
         this.name = name;
@@ -21,6 +22,7 @@ public class CourseProfile{
         this.senior = senior;
         this.prerequisites = prerequisites;
         this.description = description;
+        this.tags = tags;
     }
     //Getters
     /**
@@ -82,5 +84,11 @@ public class CourseProfile{
      */
     public String getDescription() {
         return description;
+    }
+    /**
+     * @return the tags
+     */
+    public String[] getTags() {
+        return tags;
     }
 }
