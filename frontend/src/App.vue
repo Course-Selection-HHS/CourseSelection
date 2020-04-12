@@ -21,11 +21,19 @@
         <div id="shadow_blanket" v-if="cName == 'mobile'" @click="sidebar"></div>
       <!-- </div> -->
     </transition>
+    <div id="footer">
+      <div id="footer-inner">
+        <router-link to="/"><span>Home</span></router-link>
+        <router-link to="/courses"><span>Courses</span></router-link> 
+        <router-link to="/potato"><span >Tags</span></router-link>
+        <router-link to="/quiz" id="quiz"><span >Quiz</span></router-link>
+      </div>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
-import Hamburger from "./components/sub/Hamburger.vue"
+import Hamburger from "./components/Hamburger.vue"
 import { Component, Vue } from 'vue-property-decorator';
 
 @Component({
@@ -37,10 +45,12 @@ import { Component, Vue } from 'vue-property-decorator';
 export default class Home extends Vue {
   cName = "regular"
   changed = false
+  hiddenClass = ""
 
   sidebar(): void {
     // eslint-disable-next-line
     this.cName = this.cName == "mobile" ? "regular" : "mobile"
+    this.hiddenClass = this.cName == "mobile" ? "hide" : ""
     this.changed = true
   }
 
@@ -120,10 +130,14 @@ body {
   padding: 15px;
   display: grid;
   height: calc(100px - 2 * 15px);
-  z-index: 2;
 
   grid-template-rows: 1fr;
   grid-template-columns: 200px 190px 1fr auto;
+
+  .hide {
+    display: none;
+    opacity: 0;
+  }
 
   #name {
     grid-column: 1;
@@ -143,7 +157,7 @@ body {
     top: 0px;
     width: 50vw;
     height: 100vh;
-    z-index: 999;
+    z-index: 999 !important;
     background: var(--grey3);
 
     display: grid;
@@ -167,7 +181,7 @@ body {
       --color: var(--red2);
 
       padding: calc(var(--size) / 2) var(--size);
-      border-radius: 5px;
+      border-radius: 20px;
       margin-left: calc(-1 * var(--size));
       border: 1px solid var(--color);
       background-color: var(--color);
@@ -242,49 +256,89 @@ body {
   display: contents;
 }
 
-#shadow_blanket_parent {
-  display: contents;
-  position: fixed;
-}
-
-#shadow_blanket {
-  position: fixed;
-  top: 0px;
-  left: 0px;
+#footer {
+  background: var(--grey3);
   width: 100vw;
-  height: 100vh;
-  // opacity: .6;
-  background: #000;
-  z-index: -1;
-}
+  height: 100px;
+  display:grid;
+  grid-template-columns: 1fr auto 1fr;
 
-.sidenav-enter-active, .sidenav-leave-active {
-  // transition: opacity .5s;
-  transition: transform .5s;
-}
-.sidenav-enter, .sidenav-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  // opacity: 0;
-  transform: translate(50vw, 0px);
-}
+  #footer-inner {
+    width: 50vw;
+    grid-column: 2;
 
-.blanket-enter-active, .blanket-leave-active {
-  // transition: opacity .3s;
-  transition: transform .5s;
-}
-.blanket-enter, .blanket-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  // opacity: 0;
-  transform: translate(100vw, 0px);
-}
+    place-self: center;
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 10px;
+    grid-auto-columns: auto;
 
-.fade-enter-active,
-.fade-leave-active {
-  transition-duration: 0.3s;
-  transition-property: opacity;
-  transition-timing-function: ease;
-}
+    a {
+      font-size: 1.05em;
+      color: white;
+      text-decoration: none;
+      transition: transform .3s;
 
-.fade-enter,
-.fade-leave-active {
-  opacity: 0
+      &:hover {
+        transform: scale(1.3);
+      }
+    }
+
+    @media (max-width: 450px) {
+      & {
+        width: 100vw;
+      }
+    }
+  }
 }
+// #region shadowblanked
+  #shadow_blanket_parent {
+    display: contents;
+    position: fixed;
+  }
+
+  #shadow_blanket {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    opacity: .6;
+    background: #000;
+    z-index: -1;
+  }
+// #endregion
+// #region transitions
+  .sidenav-enter-active, .sidenav-leave-active {
+    // transition: opacity .5s;
+    transition: transform .5s;
+  }
+  .sidenav-enter, .sidenav-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    // opacity: 0;
+    transform: translate(50vw, 0px);
+  }
+
+  .blanket-enter-active, .blanket-leave-active {
+    // transition: opacity .3s;
+    transition: transform .5s;
+  }
+
+  .blanket-enter, .blanket-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    // opacity: 0;
+    // opacity: .5;
+    transform: translate(100vw, 0px);
+  }
+
+  .fade-enter-active,
+  .fade-leave-active {
+    transition-duration: 0.3s;
+    transition-property: opacity;
+    transition-timing-function: ease;
+  }
+
+  .fade-enter,
+  .fade-leave-active {
+    opacity: 0
+  }
+// #endregion
 </style>

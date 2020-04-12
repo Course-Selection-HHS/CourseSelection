@@ -5,12 +5,21 @@
         <h1>Find the right class for you</h1>
         <p>HHS Course Selection allows you to find classes that suit you. You can find classes that you would never have thought to take or heard of. This Quiz will limit the time and effort it takes for you to find the right class for you.</p>
         <button>
-          <router-link to="quiz" id="quiz">Quiz</router-link>
+          <router-link to="/quiz" id="quiz">Quiz</router-link>
         </button>
       </div>
     </div>
     <div class="quotes">
-      <p>hello there</p>
+      <div id="main">
+        <h1 id="title">Make your course selection process easier</h1>
+        <div id="grid">
+          <Card v-for="data in [['John Smith', 'I really like this. The things that everyone gets wrong is the fact that I am not Johnny Appleseed. Johnny Appleseed is not very intersting nor good. He is horrible, terrible, no good, very bad. The point is, I dont like apples. I hate apples. Pear > Apples. Fight me.'],
+                                /*['Edgy Teenager', 'i am very cool. So cool infact that my blood stream is frozen. All parts of my body that contain water have been ruptured due to the fact that frozen water—ice, as you peons call it—expands. This expansion causes the particles to form a lattice and make the particles almost static, a behavior quite stark in comparison to fluid. '],*/
+                                ['Lincoln President', 'i\'m on a penny! woo. Everyday I wonder... why do pennies exist. Did you know that if Wal-Mart made every single item in the store into a rounded value (.99 -> 1.00), it would solve the wage issue. Also, did you know that it cost\'s the government more money to make pennies than what it is worth?'],
+                                ['Tyler Dictator-man II', 'omgg i loved this website and completely revolutionized my life. my life will never be the same. you should try out this website because it will help you sooo much!']]" 
+                :key="data[0]" :title="data[0]" :body="data[1]"/>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -18,19 +27,21 @@
 <script>
 // @ is an alias to /src
 // import HelloWorld from '@/components/HelloWorld.vue'
+import Card from '../components/Card.vue'
 
 export default {
   name: 'Home',
   components: {
-    // HelloWorld
+    Card
   }
 }
 </script>
 
 <style scoped lang="scss">
 #body {
-  z-index: -1;
+  z-index: 0;
   position: relative;
+  display: inline-block;
 }
 
 .home {
@@ -61,6 +72,17 @@ export default {
       font-size: 1.3em;
       border: 1px solid transparent;
       border-radius: 20px;
+      transition: all .3s;
+      box-shadow: 0px 5px 32px -1px rgba(0,0,0,0.16);
+
+      &:hover {
+        transform: scale(1.1);
+        background: var(--red3);
+      }
+
+      &:active {
+        background: purple;
+      }
 
       a {
         text-decoration: none;
@@ -100,6 +122,45 @@ export default {
       }
       p, h1 {
         width: 100%;
+      }
+    }
+  }
+}
+
+.quotes {
+  width: 100vw;
+  min-height: 75vh;
+
+  #main {
+    --padding: 50px;
+    padding: var(--padding) 0px;
+    width: 100%;
+    min-height: calc(75vh - calc(var(--padding) * 2));
+
+    display: grid;
+    grid-template-rows: auto 1fr;
+    row-gap: 20px;
+
+    #title {
+      margin: auto;
+      padding: 0px 10px;
+      place-self: center;
+    }
+
+    #grid {
+      --gridPadding: 20px;
+      width: calc(100vw - calc(2 * var(--gridPadding)));
+      height: 100%;
+      padding: var(--gridPadding);
+      place-self: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      grid-auto-flow: row;
+      column-gap: auto;
+      row-gap: 20px;
+
+      div {
+        place-self: center;
       }
     }
   }
