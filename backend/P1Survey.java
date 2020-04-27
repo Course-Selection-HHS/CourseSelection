@@ -1,3 +1,5 @@
+/*
+// THIS IS THROWING ERRORS, apparently this file is not in use
 import java.util.*;
 public class P1Survey {
   private String[] quest2;//Questions for rating qestions
@@ -47,3 +49,4 @@ public class P1Survey {
     }
   }
 }
+*/

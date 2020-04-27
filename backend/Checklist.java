@@ -39,6 +39,7 @@ public class Checklist extends Question {
         for(int i = 0; i < allTags.length; i++){
             allTags[i] = tagsFinal.get(i);
         }
+        scan.close();
         return allTags;
     }
 

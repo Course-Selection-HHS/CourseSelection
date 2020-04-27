@@ -2,7 +2,7 @@ package Server;
 //Read external files
 import java.nio.file.Files;
 import java.io.File;
-import java.io.*; 
+// import java.io.*; 
 public class Path{
     private String dataPath;
     private byte[] data;

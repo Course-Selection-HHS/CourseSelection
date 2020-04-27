@@ -72,6 +72,7 @@ public class CourseData {
             tags[i] = JSONtags.getString(i);
         }
         profile = new CourseProfile(obj.getString("department"), obj.getString("name"), obj.getInt("hours"), obj.getBoolean("isBlended"), obj.getBoolean("freshman"), obj.getBoolean("sophomore"), obj.getBoolean("junior"), obj.getBoolean("senior"), prerequisites, obj.getString("description"), tags);
+        scan.close();
         return profile;
     }
     //Gets an array of CourseProfile from a json file containing the paths of every json file for each course
@@ -93,6 +94,7 @@ public class CourseData {
         for(int i = 0; i < coursePaths.length(); i++){
             tempProfiles[i] = readCourse(path,coursePaths.getString(i));
         }
+        scan.close();
         return tempProfiles;
     }
     /**
