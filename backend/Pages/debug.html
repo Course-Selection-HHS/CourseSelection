@@ -1,0 +1,18 @@
+<h1>Quiz Answers</h1>
+<textarea id="quiz" rows="50" cols="50"></textarea>
+<button onclick="getCourses()">Get Courses</button>
+<textarea readonly id="courses" rows="4" cols="50"></textarea>
+<script>
+   
+    var getCourses = _=>{
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("courses").value = this.responseText;
+            }
+        };
+        xhttp.open("POST", "/getCourses", true);
+        xhttp.send(document.getElementById("quiz").value);
+    }
+    
+</script>
