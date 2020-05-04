@@ -1,12 +1,10 @@
 import java.util.ArrayList;
 
 public class P1FinalList {
-    public P1FinalList() {
-
-    }
+    
     //Returns an array of the classes in order of highest to lowest
     //if ap got a rating of 4 and blended 5 then put [ap, blended], [4, 5]
-    public CourseProfile[] getClasses(String[] tags, int[] rating) {
+    public static CourseProfile[] getClasses(String[] tags, int[] rating) {
         //Gets all potential classes
         
         ArrayList<CourseProfile> all = new ArrayList<CourseProfile>();
