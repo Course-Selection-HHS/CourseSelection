@@ -261,7 +261,9 @@ body {
   width: 100vw;
   height: 100px;
   display:grid;
+  font-size: .9rem;
   grid-template-columns: 1fr auto 1fr;
+  transition: all 1s;
 
   #footer-inner {
     width: 50vw;
