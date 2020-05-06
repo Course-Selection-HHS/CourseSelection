@@ -21,6 +21,13 @@
         </div>
       </div>
     </div>
+    <!-- <hr>
+    <div class="info">
+      <div id="main">
+        <h1 id="title">How does it work?</h1>
+
+      </div>
+    </div> -->
   </div>
 </template>
 
@@ -164,5 +171,15 @@ export default {
       }
     }
   }
+}
+
+.info {
+  // #main::before {
+  //   content: "";
+  //   display: inline-block;
+  //   background: grey;
+  //   width: 100vw;
+  //   height: 2px;
+  // }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
     <div id="quiz_body">
-        <h1 id="title">hi my name is quiz, nice to meet you</h1>
+        <h1 id="quiz_title">Quiz</h1>
     </div>
 </template>
 
@@ -15,7 +15,11 @@ import { Component, Vue } from 'vue-property-decorator';
   }
 })
 export default class Quiz extends Vue {
-  
+  questions?: object = {}
+ 
+  async created() {
+    this.questions = (await fetch('http://localhost:8000/getSurvey').then(_ => _.json())).questions
+  }
 }
 </script>
 
@@ -23,6 +27,7 @@ export default class Quiz extends Vue {
 #quiz_body {
     width: 100vw;
     min-height: 100vh;
+    display: inline-block;
 
     box-shadow: inset 0px 5px 43px 2px rgba(0,0,0,0.1);
 }
