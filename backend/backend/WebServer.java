@@ -1,4 +1,5 @@
-import Server.*;
+package backend;
+import backend.Server.*;
 public class WebServer {
     public static void main(String[] args){
         Server server = new Server(8000, new Path[]{new Path("/getSurvey", "", "backend/pages/survey.json", Path.TXT ,true),new Path("/getTestResults", "", "backend/pages/testSurveyResults.json", Path.TXT ,true), new Path("/debug", "", "backend/pages/debug.html", Path.HTML ,true)}, new Post[]{new Post("/getCourses", "{}", "", Path.HTML, new getCourses())} );

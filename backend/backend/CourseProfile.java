@@ -1,3 +1,5 @@
+package backend;
+
 public class CourseProfile{
     private String department;
     private String name;

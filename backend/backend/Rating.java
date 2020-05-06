@@ -1,3 +1,5 @@
+package backend;
+
 public class Rating{
     public int score;
     public String question;

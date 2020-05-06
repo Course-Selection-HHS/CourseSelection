@@ -1,3 +1,5 @@
+package backend;
+
 import java.util.*;
 public class Courses {
   private String openToGrades, name;

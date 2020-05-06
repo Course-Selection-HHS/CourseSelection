@@ -1,5 +1,8 @@
+
 /*
 // THIS IS THROWING ERRORS, apparently this file is not in use
+package backend;
+
 import java.util.*;
 public class P1Survey {
   private String[] quest2;//Questions for rating qestions

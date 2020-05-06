@@ -1,4 +1,4 @@
-package Server;
+package backend.Server;
 //Read external files
 import java.nio.file.Files;
 import java.io.File;

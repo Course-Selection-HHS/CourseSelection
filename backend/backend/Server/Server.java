@@ -1,4 +1,4 @@
-package Server;
+package backend.Server;
 //Webserver library
 import com.sun.net.httpserver.HttpServer;
 // import com.sun.net.httpserver.*;

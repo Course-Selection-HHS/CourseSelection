@@ -1,4 +1,4 @@
-package Server;
+package backend.Server;
 public class Post extends Path{
     private String responce;
     private PostAction action;

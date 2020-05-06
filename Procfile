@@ -1,0 +1,1 @@
+web: java -cp ./backend/build backend.WebServer
