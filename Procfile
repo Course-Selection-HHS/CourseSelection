@@ -1,1 +1,1 @@
-web: java -Dserver.port=8000 -cp ./backend/build backend.WebServer
+web: java -Dserver.port=$PORT $JAVA_OPTS -cp ./backend/build backend.WebServer $PORT
