@@ -36,7 +36,10 @@ public class Server{
 
                 OutputStream out=httpExchange.getResponseBody();
                 out.write(response);
+<<<<<<< HEAD
                 System.out.println("connection closed");
+=======
+>>>>>>> parent of 5d1689e... heroku debug continued
                 out.close();
             });
 
