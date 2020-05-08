@@ -1,11 +1,6 @@
 {
     "questions":[
         {
-            "type":"rate",
-            "text":"How much do you like computers",
-            "id": 1
-        },
-        {
             "type":"checklist",
             "text":"Select the subjects you like",
             "options":[
@@ -17,46 +12,28 @@
                 "Economics/Business",
                 "Arts"
             ],
+            "id": 1
+        },
+        {
+            "type":"checklist",
+            "text":"Do you play a sport?",
+            "options":[
+                "Yes",
+                "No"
+            ],
             "id": 2
         },
         {
-            "type":"checklist",
-            "text":"Select the topics you like",
+            "type":"Whats your favorite type of art?",
+            "text":"Do you play a sport?",
             "options":[
-                "Medical",
-                "Engineering",
-                "Computers",
-                "Theater",
-                "Art",
-                "Marketing"
+                "Painting",
+                "Music",
+                "Performing",
+                "Cooking"
             ],
             "id": 3
-        },
-        {
-            "type":"checklist",
-            "text":"Select all activities that interest you",
-            "options":[
-                "Gardening",
-                "Fitness", 
-                "Taking Pictures", 
-                "Cooking", 
-                "Singing", 
-                "Reading",
-                "Building things",
-                "Solving problems", 
-                "Helping others and your community",
-                "Public Speaking",
-                "Arguing"
-
-            ],
-            "id": 4
-        },
-        {
-            "type":"tf",
-            "text":"Do you like to read?",
-            "id":5
         }
-
 
     ]
 
