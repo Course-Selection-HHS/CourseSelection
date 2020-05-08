@@ -15,7 +15,7 @@
             "id": 1
         },
         {
-            "type":"checklist",
+            "type":"tf",
             "text":"Do you play a sport?",
             "options":[
                 "Yes",
@@ -24,8 +24,8 @@
             "id": 2
         },
         {
-            "type":"Whats your favorite type of art?",
-            "text":"Do you play a sport?",
+            "type":"multi",
+            "text":"Whats your favorite type of art?",
             "options":[
                 "Painting",
                 "Music",
