@@ -37,13 +37,7 @@ public class Server {
 
                 OutputStream out = httpExchange.getResponseBody();
                 out.write(response);
-                try {
-                    Thread.sleep(5000);
-                } catch (InterruptedException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
-                }
-                System.out.println("connection closed");
+                
                 out.close();
             });
 
