@@ -1,4 +1,5 @@
 package backend.Server;
+
 //Webserver library
 import com.sun.net.httpserver.HttpServer;
 // import com.sun.net.httpserver.*;
@@ -8,38 +9,41 @@ import java.io.InputStream;
 import java.io.OutputStream;
 //Setting up the port
 import java.net.InetSocketAddress;
-public class Server{
+
+public class Server {
     private int port;
     private Path[] paths;
     private Post[] posts;
     private HttpServer server;
-    public Server(int port, Path[] paths, Post[] posts){
+
+    public Server(int port, Path[] paths, Post[] posts) {
         this.port = port;
         this.paths = paths;
         this.posts = posts;
-        //Creates server at port if fails print stack trace
-        try{
+        // Creates server at port if fails print stack trace
+        try {
             this.server = HttpServer.create(new InetSocketAddress(this.port), 0);
-        }catch (Throwable tr)
-        {
+        } catch (Throwable tr) {
             tr.printStackTrace();
         }
-        //Adds every path in path array
-        for(Path path: this.paths){
-            server.createContext(path.getPath(), httpExchange ->
-            {
-                //Allows CORS
-                httpExchange.getResponseHeaders().add("Access-Control-Allow-Origin", "*"); 
-                byte response[]= path.getData();
+        // Adds every path in path array
+        for (Path path : this.paths) {
+            server.createContext(path.getPath(), httpExchange -> {
+                // Allows CORS
+                httpExchange.getResponseHeaders().add("Access-Control-Allow-Origin", "*");
+                byte response[] = path.getData();
                 httpExchange.getResponseHeaders().add("Content-Type", path.getHeader());
                 httpExchange.sendResponseHeaders(200, response.length);
 
-                OutputStream out=httpExchange.getResponseBody();
+                OutputStream out = httpExchange.getResponseBody();
                 out.write(response);
-<<<<<<< HEAD
+                try {
+                    Thread.sleep(5000);
+                } catch (InterruptedException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
                 System.out.println("connection closed");
-=======
->>>>>>> parent of 5d1689e... heroku debug continued
                 out.close();
             });
 
