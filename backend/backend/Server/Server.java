@@ -46,7 +46,7 @@ public class Server {
 
                 OutputStream out=httpExchange.getResponseBody();
                 out.write(response);
-                out.close();
+                //out.close();
             });
 
                 
