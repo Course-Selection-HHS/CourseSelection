@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT $JAVA_OPTS -cp ./backend/build backend.WebServer $PORT
+web: java -Dserver.port=$PORT $JAVA_OPTS -cp "./backend/build:./backend/org-json.jar" backend.WebServer $PORT
