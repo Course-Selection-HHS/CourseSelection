@@ -21,7 +21,19 @@ public class getCourses implements PostAction {
         ArrayList<String> tags = new ArrayList<String>();
         for (int i = 0; i < answers.length(); i++) {
             JSONObject answer = answers.getJSONObject(i);
-            Question question = new Question(answer.getInt("id"), answer.getString("type"), answer.getString("answer"));
+            Question question;
+            
+            if(answer.getString("type").equals("checklist") || answer.getString("type").equals("tf") || answer.getString("type").equals("multi")){
+                //Checklist needs a json array string as its answer so this converts it
+
+                JSONArray checklistAnswerAray = answer.getJSONArray("answer");
+                JSONObject checklistAnswer = new JSONObject();
+                checklistAnswer.put("checklist", checklistAnswerAray);
+                System.out.println(checklistAnswer.toString());
+                question = new Question(answer.getInt("id"), answer.getString("type"), checklistAnswer.toString());
+            }else{
+                question = new Question(answer.getInt("id"), answer.getString("type"), answer.getString("answer"));
+            }
             questions[i] = question;
         }
         for (Question question : questions) {
@@ -52,7 +64,6 @@ public class getCourses implements PostAction {
             allRating5[i] = 5;
         }
         CourseProfile[] courses = P1FinalList.getClasses(tagsArr, allRating5);
-        System.out.println("courses.length");
 
         JSONObject responceObj = new JSONObject();
         JSONArray courseArr = new JSONArray();
