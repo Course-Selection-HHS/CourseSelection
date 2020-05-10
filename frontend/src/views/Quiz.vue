@@ -13,7 +13,7 @@
           <div class="q" :v-if="got" v-for="(q, i) in questions" :key="i">
             <Question :data="q" :info="[i + 1, questions.length]" @sel="test" />
           </div>
-          <button id="submit" :disabled="!finished">
+          <button id="submit" :disabled="!finished" @click="submit">
               Submit
           </button>
         </div>
@@ -45,9 +45,13 @@ export default class Quiz extends Vue {
   }
 
   async created() {
-    this.questions = (await fetch('http://localhost:8000/getSurvey').then(_ => _.json())).questions as Array<object>
-    this.questions = [...this.questions, ...this.questions, ...this.questions]
+    this.questions = (await fetch('https://phase1-cs.herokuapp.com/getSurvey').then(_ => _.json())).questions as Array<object>
+    this.questions = [...this.questions]
     this.got = true
+  }
+
+  submit() {
+    fetch('https://phase1-cs.herokuapp.com/getCourses', {method: 'POST', body: JSON.stringify({answers: this.answers})}).then(_ => _.json()).then(_ => alert(_['courses'].join('\n')))
   }
 }
 
