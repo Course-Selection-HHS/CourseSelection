@@ -1,7 +1,7 @@
 <template>
-  <div class="card">
+  <div class="card" :style="(size ? `height: ${size}px;` : '') ">
       <div id="card-title">{{title}}</div>
-      <div id="card-body">{{body}}</div>
+      <div id="card-body" :style="(isQuestion ? 'place-self: center; font-size: 1.3rem; margin: -5px; padding: 0px; position: relative; bottom: 15px;' : '')">{{body}}</div>
   </div>
 </template>
 
@@ -12,6 +12,8 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 export default class Card extends Vue {
     @Prop() private title!: string
     @Prop() private body!: string
+    @Prop() private size!: number
+    @Prop() private isQuestion!: boolean
 }
 </script>
 

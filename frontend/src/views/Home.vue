@@ -13,10 +13,10 @@
       <div id="main">
         <h1 id="title">Make your course selection process easier</h1>
         <div id="grid">
-          <Card v-for="data in [['John Smith', 'I really like this. The things that everyone gets wrong is the fact that I am not Johnny Appleseed. Johnny Appleseed is not very intersting nor good. He is horrible, terrible, no good, very bad. The point is, I dont like apples. I hate apples. Pear > Apples. Fight me.'],
+          <Card v-for="data in [['John Smith', 'sample text.'],
                                 /*['Edgy Teenager', 'i am very cool. So cool infact that my blood stream is frozen. All parts of my body that contain water have been ruptured due to the fact that frozen water—ice, as you peons call it—expands. This expansion causes the particles to form a lattice and make the particles almost static, a behavior quite stark in comparison to fluid. '],*/
-                                ['Lincoln President', 'i\'m on a penny! woo. Everyday I wonder... why do pennies exist. Did you know that if Wal-Mart made every single item in the store into a rounded value (.99 -> 1.00), it would solve the wage issue. Also, did you know that it cost\'s the government more money to make pennies than what it is worth?'],
-                                ['Tyler Dictator-man II', 'omgg i loved this website and completely revolutionized my life. my life will never be the same. you should try out this website because it will help you sooo much!']]" 
+                                ['Lincoln President', 'sample text.'],
+                                ['Tired Student', 'sample text']]" 
                 :key="data[0]" :title="data[0]" :body="data[1]"/>
         </div>
       </div>
@@ -88,7 +88,7 @@ export default {
       }
 
       &:active {
-        background: purple;
+        background: rgb(128, 128, 128);
       }
 
       a {
@@ -142,7 +142,7 @@ export default {
     --padding: 50px;
     padding: var(--padding) 0px;
     width: 100%;
-    min-height: calc(75vh - calc(var(--padding) * 2));
+    min-height: calc(100vh - calc(var(--padding) * 2));
 
     display: grid;
     grid-template-rows: auto 1fr;
