@@ -1,11 +1,15 @@
 package backend;
 
+import org.bson.Document;
 //Package to deal with json in java
 import org.json.*;
 //Reads text file
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+
+import com.mongodb.client.MongoCollection;
+
 //imports ArrayList
 import java.util.ArrayList;
 public class CourseData {
@@ -42,7 +46,7 @@ public class CourseData {
         // Reads the file with all the paths of the courses and compiles them into an array
         //Give the folder path, the path file must be name courses.json
         try {
-            this.profiles = readJSON("backend/courses");
+            this.profiles = readJSON(Database.COLLECTION_COURSES);
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -51,7 +55,8 @@ public class CourseData {
     public CourseData(CourseProfile[] profiles){
         this.profiles = profiles;
     }
-    private CourseProfile readCourse(String folder, String filename) throws FileNotFoundException {
+    //Old code when json was used
+    /*private CourseProfile readCourse(String folder, String filename) throws FileNotFoundException {
         //Holds profile obj
         CourseProfile profile;
         //Reads File
@@ -77,10 +82,13 @@ public class CourseData {
         scan.close();
         return profile;
     }
-    //Gets an array of CourseProfile from a json file containing the paths of every json file for each course
-    private CourseProfile[] readJSON(String path) throws FileNotFoundException {
+    */
+    //Gets an array of CourseProfile from a the document files in Database.COURSES
+    private CourseProfile[] readJSON(MongoCollection<Document> collection) throws FileNotFoundException {
         //Temporary CourseProfile array to hold the return value
-        CourseProfile[] tempProfiles;
+        CourseProfile[] tempProfiles = new CourseProfile[(int)collection.count()];
+        //Old Code when JSON was used
+        /*
         //Reads File
         String jsonString =  ""; 
         File file = new File(path+"/courses.json"); 
@@ -97,6 +105,24 @@ public class CourseData {
             tempProfiles[i] = readCourse(path,coursePaths.getString(i));
         }
         scan.close();
+        */
+        int profileIndex = 0;
+        for (Document doc : collection.find()) {
+            JSONObject obj = new JSONObject(doc.toJson());
+            JSONArray JSONprerequisites = obj.getJSONArray("prerequisites");
+            //Constructs  CourseProfile from json object
+            String[] prerequisites = new String[JSONprerequisites.length()];
+            for(int i =0; i < JSONprerequisites.length(); i++){
+                prerequisites[i] = JSONprerequisites.getString(i);
+            }
+            JSONArray JSONtags = obj.getJSONArray("tags");
+            String[] tags = new String[JSONtags.length()];
+            for(int i =0; i < JSONtags.length(); i++){
+                tags[i] = JSONtags.getString(i);
+            }
+            tempProfiles[profileIndex] = new CourseProfile(obj.getString("department"), obj.getString("name"), obj.getInt("hours"), obj.getBoolean("isBlended"), obj.getBoolean("freshman"), obj.getBoolean("sophomore"), obj.getBoolean("junior"), obj.getBoolean("senior"), prerequisites, obj.getString("description"), tags);
+            profileIndex++;
+        } 
         return tempProfiles;
     }
     /**
@@ -261,5 +287,13 @@ public class CourseData {
             coursesArr[i] = courses.get(i);
         }
         return new CourseData(coursesArr);
+    }
+    //Prints all profiles
+    public String toString(){
+        String r = "";
+        for(CourseProfile profile: profiles){
+            r+= profile.getName()+"\n";
+        }
+        return r;
     }
 }
