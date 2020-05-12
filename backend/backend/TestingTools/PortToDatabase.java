@@ -29,7 +29,6 @@ public class PortToDatabase {
             try {
                 scan = new Scanner(new File("./backend/courses/"+path));
             } catch (FileNotFoundException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
                 scan = null;
             }

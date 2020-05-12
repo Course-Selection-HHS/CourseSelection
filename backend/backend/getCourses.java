@@ -45,7 +45,6 @@ public class getCourses implements PostAction {
                 try {
                     newTags = checklist.getTags();
                 } catch (FileNotFoundException e) {
-                    // TODO Auto-generated catch block
                     e.printStackTrace();
                     newTags = new String[]{};
                 }
