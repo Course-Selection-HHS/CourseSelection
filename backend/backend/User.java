@@ -1,6 +1,5 @@
 package backend;
 
-import java.io.Console;
 
 import com.mongodb.client.model.Filters;
 
