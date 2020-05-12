@@ -57,6 +57,15 @@ public class SessionID {
         int index = (int)(Math.random() * SessionID.digits.length);
         return ""+SessionID.digits[index];
     }
+    //Static method to check if id exists and is valid
+    public static boolean validateSessionID(String id){
+        try {
+            Database.COLLECTION_USERS.find(Filters.eq("sessionID", id)).first().get("username");
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
     /**
      * @return the id
      */
