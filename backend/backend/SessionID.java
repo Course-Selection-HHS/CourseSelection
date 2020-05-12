@@ -12,9 +12,12 @@ public class SessionID {
     public static final String upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     public static final String lower = upper.toLowerCase(Locale.ROOT);
     public static final int[] digits = {0,1,2,3,4,5,6,7,8,9};
-
     //Creates new Session ID
     public SessionID(){
+        this.id = this.genID(14);
+    }
+    //Create Session ID with predetermined id
+    public SessionID(String id){
         this.id = this.genID(14);
     }
     //Create Session ID and sets it to the User
@@ -61,4 +64,5 @@ public class SessionID {
     public String getId() {
         return id;
     }
+   
 }

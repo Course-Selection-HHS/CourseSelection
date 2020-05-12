@@ -10,8 +10,24 @@ public class User {
     private String username;
     private String name;
     private SessionID sessionID;
-    //Get Active user with username
-    public User(String username){
+    //Get Active user with username or session
+    public User(String loginCredendials){
+        if(loginCredendials.contains("@")){
+            getUserByUsername(loginCredendials);
+        }else{
+            getUserBySessionID(loginCredendials);
+        }
+
+        
+    }
+    //Used when session ID is provided to construct
+    private void getUserBySessionID(String loginCredendials) {
+        this.sessionID = new SessionID(loginCredendials);
+        this.username = (String)Database.COLLECTION_USERS.find(Filters.eq("sessionID", this.sessionID.getId())).first().get("username");
+        this.name = (String)Database.COLLECTION_USERS.find(Filters.eq("sessionID", this.sessionID.getId())).first().get("name");
+    }
+    //Used when username is provided to construct
+    private void getUserByUsername(String username) {
         this.username = username;
         try {
             this.name = (String)Database.COLLECTION_USERS.find(Filters.eq("username", this.username)).first().get("name");
