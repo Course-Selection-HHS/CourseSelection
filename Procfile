@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT $JAVA_OPTS -cp "./backend/build:./backend/org-json.jar" backend.WebServer $PORT
+web: java -Dserver.port=$PORT $JAVA_OPTS -cp "./backend/build:./backend/org-json.jar:./backend/mongo-java-driver-3.7.0-rc0.jar" backend.WebServer $PORT
