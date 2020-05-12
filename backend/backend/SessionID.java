@@ -5,6 +5,8 @@ import java.util.Random;
 
 import com.mongodb.client.model.Filters;
 
+import org.bson.Document;
+
 public class SessionID {
     private String id;
     public static final String upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -19,7 +21,7 @@ public class SessionID {
     public SessionID(User user){
         this.id = this.genID(14);
         try {
-            Database.COLLECTION_USERS.find(Filters.eq("username", user.getUsername())).first().append("sessionID", this.id);
+            Database.COLLECTION_USERS.updateOne(Filters.eq("username", user.getUsername()), new Document("$set", new Document("sessionID", this.id)));
         } catch (Exception e) {
             System.out.println("Username not found");
             e.printStackTrace();
