@@ -12,4 +12,6 @@ public class Database {
             "mongodb+srv://backend:hamzaIsAMediocreProgrammer@cluster0-97ewx.gcp.mongodb.net/test?retryWrites=true&w=majority");
     public static final MongoDatabase DATABASE = CLIENT.getDatabase("CourseSelection");
     public static final MongoCollection<Document> COLLECTION_COURSES = DATABASE.getCollection("Courses");
+    public static final MongoCollection<Document> COLLECTION_USERS = DATABASE.getCollection("Users");
+
 }
