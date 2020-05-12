@@ -2,7 +2,6 @@ package backend.TestingTools;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 import com.mongodb.client.MongoClient;
@@ -21,7 +20,6 @@ public class PortToDatabase {
                 "mongodb+srv://backend:hamzaIsAMediocreProgrammer@cluster0-97ewx.gcp.mongodb.net/test?retryWrites=true&w=majority");
         MongoDatabase database = mongoClient.getDatabase("CourseSelection");
         MongoCollection<Document> collection = database.getCollection("Courses");
-        ArrayList<Document> docs = new ArrayList<Document>();
         File dir = new File("./backend/courses");
         String[] paths = dir.list();
         //For Every file in courses converts into a Doc and inserts it

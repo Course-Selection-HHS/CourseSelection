@@ -4,9 +4,7 @@ import org.bson.Document;
 //Package to deal with json in java
 import org.json.*;
 //Reads text file
-import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.Scanner;
 
 import com.mongodb.client.MongoCollection;
 
