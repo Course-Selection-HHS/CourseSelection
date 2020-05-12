@@ -23,8 +23,18 @@ public class User {
     //Used when session ID is provided to construct
     private void getUserBySessionID(String loginCredendials) {
         this.sessionID = new SessionID(loginCredendials);
-        this.username = (String)Database.COLLECTION_USERS.find(Filters.eq("sessionID", this.sessionID.getId())).first().get("username");
-        this.name = (String)Database.COLLECTION_USERS.find(Filters.eq("sessionID", this.sessionID.getId())).first().get("name");
+        try {
+            this.username = (String)Database.COLLECTION_USERS.find(Filters.eq("sessionID", this.sessionID.getId())).first().get("username");
+        } catch (Exception e) {
+            System.out.println("SessionID Not found");
+            e.printStackTrace();
+        }
+        try {
+            this.name = (String)Database.COLLECTION_USERS.find(Filters.eq("sessionID", this.sessionID.getId())).first().get("name");
+        } catch (Exception e) {
+            System.out.println("SessionID Not found");
+            e.printStackTrace();
+        }
     }
     //Used when username is provided to construct
     private void getUserByUsername(String username) {
@@ -52,6 +62,15 @@ public class User {
     //Creates a new sessionID and updates it in database
     public void generateNewSessionID(){
         this.sessionID = new SessionID(this);
+    }
+    //Deletes this user from server
+    public void delete(){
+        Database.COLLECTION_USERS.deleteOne(Filters.eq("username", this.username));
+    }
+    //Changes the name of this user
+    public void changeName(String newName){
+        Database.COLLECTION_USERS.updateOne(Filters.eq("username", this.getUsername()), new Document("$set", new Document("name", newName)));    
+        this.name = newName;
     }
     /**
      * @return the username

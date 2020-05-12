@@ -18,7 +18,7 @@ public class SessionID {
     }
     //Create Session ID with predetermined id
     public SessionID(String id){
-        this.id = this.genID(14);
+        this.id = id;
     }
     //Create Session ID and sets it to the User
     public SessionID(User user){
