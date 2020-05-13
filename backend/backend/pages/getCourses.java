@@ -1,9 +1,9 @@
-package backend;
+package backend.pages;
 
 // import java.io.FileWriter;
 import backend.Server.*;
 import org.json.*;
-
+import backend.*;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
