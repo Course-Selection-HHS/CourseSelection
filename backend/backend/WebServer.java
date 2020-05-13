@@ -2,7 +2,7 @@ package backend;
 
 //import java.io.File;
 //import java.io.IOException;
-
+import backend.pages.*;
 import backend.Server.*;
 
 public class WebServer {
