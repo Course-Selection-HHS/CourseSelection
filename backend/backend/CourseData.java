@@ -46,7 +46,6 @@ public class CourseData {
         try {
             this.profiles = readJSON(Database.COLLECTION_COURSES);
         } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
