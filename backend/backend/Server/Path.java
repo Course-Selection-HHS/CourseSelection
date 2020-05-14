@@ -35,7 +35,6 @@ public class Path{
             try {
                 this.data = data.getBytes("UTF-8");;
             } catch (Exception e) {
-                //TODO: handle exception
             }
             this.loaded = true;
             this.external = false;
@@ -58,7 +57,6 @@ public class Path{
             try {
                 this.data = data.getBytes("UTF-8");
             } catch (Exception e) {
-                //TODO: handle exception
             }
             this.loaded = true;
         }
@@ -124,7 +122,6 @@ public class Path{
         try {
             this.data = data.getBytes("UTF-8");
         } catch (Exception e) {
-            //TODO: handle exception
         }
     }
     /**
