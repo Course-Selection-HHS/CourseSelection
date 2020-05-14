@@ -56,7 +56,6 @@ public class login implements PostAction {
         }else{
             currentUser = new User(username, name);
         }
-        System.out.println("test");
         String sessionID = currentUser.getSessionID();
         JSONObject sucessfulGoogleResponce = new JSONObject();
         sucessfulGoogleResponce.put("success", true);
