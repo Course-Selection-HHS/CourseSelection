@@ -90,5 +90,13 @@ public class User {
     public String getSessionID() {
         return sessionID.getId();
     }
+    public static boolean doesUserExist(String testUsername){
+        try {
+            Database.COLLECTION_USERS.find(Filters.eq("username", testUsername)).first().get("name");
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
 
 }
