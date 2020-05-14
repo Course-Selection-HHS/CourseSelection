@@ -1,0 +1,27 @@
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<meta name="google-signin-client_id" content="1067755850474-iuoregvu95v7euiujp7e9fe99vp0kc6m.apps.googleusercontent.com">
+<div class="g-signin2" data-onsuccess="onSignIn"></div>
+<script>
+var login = (json)=>{
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            console.log(this.responseText)
+        }
+    };
+    xhttp.open("POST", "/oauth", true);
+    xhttp.send(JSON.stringify(json));
+}
+function onSignIn() {
+  const googleUser = gapi.auth2.getAuthInstance().currentUser.get();
+  console.log(googleUser);
+  const profile = googleUser.getBasicProfile();
+  let loginObj = {
+    token: googleUser.tc.access_token,
+    name: profile.getName(),
+    method: "google"
+  }
+  console.log(loginObj);
+  login(loginObj)
+}
+</script>
