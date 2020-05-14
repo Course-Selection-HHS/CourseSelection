@@ -92,7 +92,7 @@ public class User {
     }
     public static boolean doesUserExist(String testUsername){
         try {
-            Database.COLLECTION_USERS.find(Filters.eq("username", testUsername)).first().get("name");
+            Database.COLLECTION_USERS.find(Filters.eq("sessionID", testUsername)).first().get("username");
             return true;
         } catch (Exception e) {
             return false;
