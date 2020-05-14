@@ -1,6 +1,5 @@
 package backend;
 
-import com.mongodb.client.MongoCollection;
 import com.mongodb.client.model.Filters;
 
 import org.bson.Document;
