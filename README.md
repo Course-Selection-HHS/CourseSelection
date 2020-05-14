@@ -17,4 +17,4 @@ Write test
 - [ ] Tag weight (1-5) / Level 2 Tags (Caleb, Tyler)
 - [ ] Rating Questions (Strongly Disagree, Disagree, Neutral, Agree, Strongly Agree) (Iniya/Marcello)
 - [x] Migrate Courses to Database (Konrad)
-- [ ] Sign in with OAuth (Sign in with Google, Github, Twitter, etc.) (Marcello/Konrad)
+- [x] Sign in with OAuth (Sign in with Google, Github, Twitter, etc.) (Marcello/Konrad)
