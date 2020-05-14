@@ -1,6 +1,5 @@
 package backend;
 
-
 import com.mongodb.client.model.Filters;
 
 import org.bson.Document;
@@ -89,6 +88,20 @@ public class User {
     
     public String getSessionID() {
         return sessionID.getId();
+    }
+    public static boolean doesUserExist(String testUsername){
+        
+        try {
+            if(( Database.COLLECTION_USERS.count(Filters.eq("username", testUsername))) > 0){
+                return true;
+            }
+            return false;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+
+       
     }
 
 }
