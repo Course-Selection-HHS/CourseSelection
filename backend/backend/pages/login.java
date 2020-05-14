@@ -13,6 +13,7 @@ import backend.Server.*;
 
 public class login implements PostAction {
     private Path postResponce;
+    private final String GOOGLE_CLIENT_ID = "1067755850474-iuoregvu95v7euiujp7e9fe99vp0kc6m.apps.googleusercontent.com"
     public Path sendResponce() {
         return postResponce;
     }
@@ -43,7 +44,7 @@ public class login implements PostAction {
             return;
         } catch (JSONException e) {
         }
-        if(!oauthResponce.getString("azp").equals("1067755850474-iuoregvu95v7euiujp7e9fe99vp0kc6m.apps.googleusercontent.com")){
+        if(!oauthResponce.getString("azp").equals(GOOGLE_CLIENT_ID)){
             returnFailed();
             return;
         }
