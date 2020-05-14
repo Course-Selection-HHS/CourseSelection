@@ -60,9 +60,12 @@ public class SessionID {
     //Static method to check if id exists and is valid
     public static boolean validateSessionID(String id){
         try {
-            Database.COLLECTION_USERS.find(Filters.eq("sessionID", id)).first().get("username");
-            return true;
+            if(( Database.COLLECTION_USERS.count(Filters.eq("sessionID", id))) > 0){
+                return true;
+            }
+            return false;
         } catch (Exception e) {
+            e.printStackTrace();
             return false;
         }
     }
