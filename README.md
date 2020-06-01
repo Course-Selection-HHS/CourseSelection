@@ -5,7 +5,7 @@ All hail the raven hegemon. uh no. hail 👑 king hamza 👑
 Write test
 
 
-# PHASE 2.1 - ENDS June 14st
+# PHASE 2.1 - ENDS June 14th
 ## Front End:
 - [ ] Scrape courses off of PDF / Course Explorer 
 - [ ] Fix Homepage Button
